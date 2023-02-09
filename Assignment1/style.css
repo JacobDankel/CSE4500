@@ -1,0 +1,9 @@
+.number{
+    list-style-type: number;
+}
+.dot{
+    list-style-type: circle;
+}
+table, td {
+    border: 1px, solid black;
+}
