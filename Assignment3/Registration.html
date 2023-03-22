@@ -3,6 +3,7 @@
     <header>
         <title>Registration</title>
         <link rel="stylesheet" href="style2.css">
+        <script src="registration.js"></script>
     </header>
     <body>
         <div>
@@ -281,23 +282,54 @@
                                 <option value="Yemen">Yemen</option>
                                 <option value="Zambia">Zambia</option>
                                 <option value="Zimbabwe">Zimbabwe</option>
-                            </select></th>
+                            </select>
+                        </th>
                     </tr>
                     <tr>
                         <th>Gender</th>
-                        <th><input type="radio" id="mGender" name="Gender"> Male</th>
-                        <th><input type="radio" id="fGender" name="Gender"> Female</th>
-                        <th><input type="radio" id="oGender" name="Gender"> Other</th>
+                        <th><input type="radio" name="gender" id="gender" value="Male"> Male</th>
+                        <th><input type="radio" name="gender" id="gender" value="Female"> Female</th>
+                        <th><input type="radio" name="gender" id="gender" value="Other"> Other</th>
                     </tr>
                     <tr>
                         <th><!-- Empty Table Entry --></th>
                         <th>
-                            <button id="Cancel">Cancel</button>
-                            <button id="Register">Register</button>
+                            <button id="Cancel" onclick="cancelInputs()">Cancel</button>
+                            <button id="Register" onclick="submitNewUser()">Register</button>
                         </th>
                     </tr>
                 </table>
             </div>
+            <div class="box2" id="confirmation" style="display: none;">
+                <h1> Confirmation </h1>
+                <table>
+                    <tr>
+                        <th>First Name: </th><th id="fNameResult"></th>
+                        <th><!-- Empty Table Entry --></th>
+                        <th>Last Name: </th><th id="lNameResult"></th>
+                    </tr>
+                    <tr>
+                        <th>Phone Number: </th><th id="phoneNumResult"></th>
+                        <th><!-- Empty Table Entry --></th>
+                        <th>Email: </th><th id="emailResult"></th>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth: </th><th id="DOBResult"></th>
+                        <th><!-- Empty Table Entry --></th>
+                        <th>Country: </th><th id="countryResult"></th>
+                    </tr>
+                    <tr>
+                        <th>Gender: </th><th id="genderResult"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <button id="Confirm" onclick="confirmUser()">Confirm</button>
+                        </th>
+                    </tr>
+                </table>                
+            </div>
+
+            <div id="result"></div>
         <div>&nbsp;</div>
         <div class="footer">
             <p>1-800-555-8080</p>
