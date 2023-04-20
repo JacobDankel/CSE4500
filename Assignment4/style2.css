@@ -52,7 +52,9 @@ body {
         box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
     }
 
-
+    span{
+        color: lightcoral;
+    }
 
     .about {
         color:222222;
