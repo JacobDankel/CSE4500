@@ -90,12 +90,12 @@ function validate(){
             status=true;
         }
         //Phone Check
-        phoneCheck();
         if(phoneno.length<1){
             document.getElementById("phoneloc").innerText=" Please enter your phone number";
             status=false;
         } else {
             document.getElementById("phoneloc"). innerText ="";
+            phoneCheck();
             status=true;
         }
         //Email Check
@@ -170,9 +170,11 @@ function phoneCheck(){
     var phoneno = /^\(?([0-9]{3})\)?[-.* ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
     if(document.getElementById("phoneNum").value.match(phoneno)){
+        console.log("Matched the format");
         return true;
     } else {
-        document.getElementById("phoneloc").innerHTML="Your phone number should be all digits.";
+        document.getElementById("phoneloc").innerHTML="Please enter a valid phone number";
+        console.log("Didnt Match the format");
         return false;
     }
 }
