@@ -19,12 +19,12 @@
 
             <div class="box">
                 <h1> Register </h1>
-                <form name="f1" action="#" onsubmit="return validate()">
+                <form name="f1" action="#" onsubmit="return false">
                 <table>
                     <tr>
-                        <th>First Name: </th><th><input type="text" id="fName" value=""></th>
+                        <th>First Name: </th><th><input type="text" id="fname" value=""></th>
                         <th><span id="fnameloc"></span></th>
-                        <th>Last Name: </th><th><input type="text" id="lName" value=""></th>
+                        <th>Last Name: </th><th><input type="text" id="lname" value=""></th>
                         <th><span id="lnameloc"></span></th>
                     </tr>
                     <tr>
@@ -38,7 +38,8 @@
                         <th><span id="DOBloc"></span></th>
                         <th><label for="country">Country</label></th>
                         <th>
-                            <select id="country" name="country" class="form-control" style="width: 90%">
+                            <select id="country" name="country" class="form-control" style="width: 75%">
+                                    <option value=""></option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Åland Islands">Åland Islands</option>
                                     <option value="Albania">Albania</option>
